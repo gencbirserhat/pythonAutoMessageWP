@@ -1,0 +1,105 @@
+"""import time
+import keyboard
+import webbrowser as web
+import pyautogui as pg
+from pywhatkit.core import core, log
+
+pg.FAILSAFE = False
+
+
+try:
+    core.check_connection()
+except Exception as e:
+    print(f"İnternet bağlantısı hatası: {e}")
+    exit()
+
+
+def sendautomsg(
+    phone_no: str,
+    message: str,
+    wait_time: int = 15,
+    tab_close: bool = True,
+    close_time: int = 3,
+):
+    try:
+        web.open(f"https://web.whatsapp.com/send?phone={phone_no}")
+        print(f"{phone_no} numarasına mesaj gönderiliyor...")
+
+        time.sleep(wait_time)
+        pg.click(pg.size().width // 2, pg.size().height // 2)
+        time.sleep(2)
+
+        keyboard.write(message)
+        keyboard.press("enter")
+        log.log_message(_time=time.localtime(), receiver=phone_no, message=message)
+
+        print(f"{phone_no} numarasına mesaj gönderildi.")
+
+        if tab_close:
+            time.sleep(close_time)
+            pg.hotkey("ctrl", "w")
+
+    except Exception as e:
+        print(f"Hata oluştu: {e}")
+
+
+print("WHATSAPP OTOMATİK MESAJ BOTUNA HOŞ GELDİNİZ\n")
+print("DİKKAT: BOT ÇALIŞIRKEN BİLGİSAYARINIZI KULLANMAYINIZ!\n")
+
+
+phone_numbers = ["5336511538", "5458648718", "5545542641", "5078669759"]
+
+message = "TEST MESAJIDIR!! Merhaba, GameNight etkinliğimiz için kontenjana dahilsiniz!🥳 Kesin katılım sağlayacaksanız en geç 19.00'a kadar haber vermenizi rica ediyoruz, aksi takdirde hakkınız yedek kontenjana devredilecektir."
+
+for phoneNum in phone_numbers:
+    full_phone_number = "+90" + phoneNum
+    sendautomsg(full_phone_number, message)
+    time.sleep(5)
+
+print("Tüm mesajlar başarıyla gönderildi.")
+"""
+
+
+   "+905527216181",
+    "+905523231140",
+    "+905352265713",
+    "+905547936116",
+    "+905461831677",
+    "+905458648718",
+    "+905468968118",
+    "+905078745316",
+    "+905443107745",
+    "+905417324411",
+    "+905073856532",
+    "+905545542641",
+    "+905078669759",
+    "+905446260843",
+    "+905533324364",
+    "+905417607236",
+    "+905445639998",
+    "+905380425218",
+    "+905516429379",
+    "+905438982305",
+    "+905396999031",
+    "+905535238889",
+    "+905378891821",
+    "+905414333552",
+    "+905349804936",
+    "+905413753598",
+    "+905414943146",
+    "+905422485560",
+    "+905551520422",
+    "+905349760973",
+    "+905511720740",
+    "+905522641366",
+    "+905302064178",
+    "+905380880528",
+    "+905346227342",
+    "+905059763354",
+    "+905521860188",
+    "+905525822005",
+    "+905317248423",
+    "+905355280508",
+    "+905369162380",
+    "+905304956798",
+    "+905417664475",
